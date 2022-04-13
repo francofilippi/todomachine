@@ -13,7 +13,9 @@ import { AppUI } from './AppUI'
 function App() {
 
   return (
-    <TodoProvider>
+    /* Al englobar AppUI y todos sus componentes hijos en el TodoProvider, 
+    estoy poniendo a disposición de ellos todos los estados del provider del TodoContext */
+    <TodoProvider> 
       <AppUI />
     </TodoProvider>
   );

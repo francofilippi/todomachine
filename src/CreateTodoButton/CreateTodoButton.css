@@ -19,11 +19,13 @@
   justify-content: center;
   height: 42px;
   width: 42px;
+  z-index: 1;
 
   transform: rotate(0);
   transition: .3s ease;
   justify-self: center;
 }
+
 
 .CreateTodoButton:hover {
   transform: rotate(224deg);

@@ -1,21 +1,23 @@
 import React from 'react';
+import { TodoContext } from '../TodoContext';
+
 import './TodoSearch.css';
 
-function TodoSearch(props) {
+function TodoSearch() {
 
-  // const [searchValue, setSearchValue] = React.useState('');
-  //const [estado, fxquecambiaelestado] = React.useState(estadoinicial); 
-
+  // Consumo los estados que quiero del provider, con el hook useContext
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   const onSearchValueChange = (event) => {
-    console.log(event.target.value)
-    props.setSearchValue(event.target.value)
+    console.log(event.target.value);
+    setSearchValue(event.target.value);
   };
+
   return (
     <input
       className="TodoSearch"
       placeholder="Cebolla"
-      value={props.searchValue}
+      value={searchValue}
       onChange={onSearchValueChange}
     />
   )
